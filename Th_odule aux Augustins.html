@@ -11,30 +11,75 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Théodule aux Augustins" startnode="6" creator="Twine" creator-version="2.3.5" ifid="4126091E-2402-4D59-B4AD-022BCAE4A0F5" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Départ" tags="1 Jiacoma" position="425,150" size="200,100">Tu est un nouvel élève au lycée des Augustins. Ici tu pourra rencontrer  M Jiacoma qui te montrera quelques lieux importants.
+<tw-storydata name="Théodule aux Augustins" startnode="6" creator="Twine" creator-version="2.3.5" ifid="4126091E-2402-4D59-B4AD-022BCAE4A0F5" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="+-1-Moral" color="green"></tw-tag>,<tw-tag name="Ben" color="purple"></tw-tag>,<tw-tag name="Couteau" color="blue"></tw-tag>,<tw-tag name="Déces" color="red"></tw-tag>,<tw-tag name="Jiacoma" color="purple"></tw-tag><tw-passagedata pid="1" name="Départ" tags="1 Jiacoma" position="475,625" size="200,100">Tu est un nouvel élève au lycée des Augustins. Ici tu pourra rencontrer  M Jiacoma qui te montrera quelques lieux importants.
 Jiacoma : Salut Théodule! Tu peut te rendre à l&#39;un des endroits suivants :
 [[Tu vois ici c&#39;est mon bureau|Bureau de Jiac]],
 [[là il y a les toilettes|Toilettes]],
 [[ici c&#39;est le maison des lycéens|Maison des lycéens]],
-[[ou tu peut directement te rendre dans la salle de classe|Classe H111]]. </tw-passagedata><tw-passagedata pid="2" name="Bureau de Jiac" tags="Jiacoma 8 Couteau" position="125,150" size="100,100">Alors que tu arrives dans le bureau de M. Jiacoma, tu t&#39;apercois qu&#39;il n&#39;est pas là. Tu décides de fouiller dans son bureau et tu trouves un couteau de poche au fond d&#39;un tiroir. Mets le dans ton inventaire et va en cours en [[111|Classe H111]] .</tw-passagedata><tw-passagedata pid="3" name="Toilettes" tags="" position="700,300" size="100,100">Tu viens d&#39;arriver aux toilettes. Alors que tu t&#39;aprètes à occuper ce lieu tu lances deux dés6 : ca fait (random: 1, 12)</tw-passagedata><tw-passagedata pid="4" name="Maison des lycéens" tags="" position="500,325" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="Classe H111" tags="" position="225,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="Initialisation" tags="" position="475,0" size="100,100">Pour jouer il faut que tu notes ta fiche de personnage :
+[[ou tu peut directement te rendre dans la salle de classe|Classe H111]]. </tw-passagedata><tw-passagedata pid="2" name="Bureau de Jiac" tags="Jiacoma 8 Couteau" position="225,825" size="100,100">Alors que tu arrives dans le bureau de M. Jiacoma, tu t&#39;apercois qu&#39;il n&#39;est pas là. Tu décides de fouiller dans son bureau et tu trouves un couteau de poche au fond d&#39;un tiroir.
+(set: $Objets to $Objets + (ds: &quot;Schlass&quot;))\
+Mets le dans ton inventaire et va en cours en [[111|Classe H111]] .</tw-passagedata><tw-passagedata pid="3" name="Toilettes" tags="15" position="875,575" size="100,100">Tu viens d&#39;arriver aux toilettes. Alors que tu t&#39;aprètes à occuper ce lieu tu lances deux dés6 : ca fait (print: (random: 1, 12))
 
-Charisme :		(2 à 5)
-Intelligence :
-Force :
-Dextérité :
+[[[Si tu a fait 12...|Ben]]]
+[[Si tu a fait un autre chiffre...|Satisfaction]]</tw-passagedata><tw-passagedata pid="4" name="Maison des lycéens" tags="20" position="1175,900" size="100,100">Tu viens d&#39;arriver devant la maison des lycéens.
+Tu peut choisir où te poser:
+[[Aux babyfoots|Babyfoot]]
+[[Aux banquettes|Banquette]]
+[[A la machine à café|Café]]
+[[Ou bien tu va en cours|Classe H111]]</tw-passagedata><tw-passagedata pid="5" name="Classe H111" tags="" position="500,1100" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="Initialisation" tags="starup Startup" position="400,300" size="100,100">Pour jouer il faut que tu notes ta fiche de personnage :
 
-Moral : 3
-Santé Mentale : 3
+(set: $charisme to (random: 2, 4))\
+Charisme :		(print: $charisme)
+(set: $Intelligence to (random: 2, 4))\
+Intelligence :	(print: $Intelligence)
+(set: $Force to (random: 2, 4))\
+Force :			(print: $Force)
+(set: $Dexterite to (random: 2, 4))\
+Dextérité :		(print: $Dexterite)
 
-Inventaire : 
-	Pognon : 10€
-	Mains : 2
-	
+(set: $Moral to 5)\
+Moral : (print: $Moral)
+(set: $S_M to 3)\
+Santé Mentale : (print: $S_M)
 
-Amitiés :
+Inventaire :
+	(set: $Pognon to 10)\
+	Pognon : (print: $Pognon)€
+	(set: $Mains to 2)\
+	Nombre de Mains : (print: $Mains)
+	Objets : rien pour l&#39;instant.
+	(set: $Objets to (ds: ))
 
+Amitiés : Pas encore mais peut etre bientot ;)
+	(set: $Amities to (ds: ))
 
-[[Départ]] </tw-passagedata></tw-storydata>
+[[Départ]] </tw-passagedata><tw-passagedata pid="7" name="Ben" tags="Ben Déces 69" position="1050,575" size="100,100">Tu rencontres Ben.
+[[Ta partie se termine sur cette action.|Déces]]</tw-passagedata><tw-passagedata pid="8" name="Satisfaction" tags="40 +-1-Moral" position="700,800" size="100,100">Tu te vides avec succès, et non sans un certain plaisir.
+Tu gagnes un point de moral. (set: $Moral to $Moral + 1)
+
+[[Tu peut aller en H111|Classe H111]],
+[[ou aller à la Maison des Lycéens|Maison des lycéens]].</tw-passagedata><tw-passagedata pid="9" name="Déces" tags="" position="800,375" size="100,100">(set: $nb_morts to $nb_morts + 1)\
+[[Mais tu peut recommencer si tu veut.|Départ]]</tw-passagedata><tw-passagedata pid="10" name="Babyfoot" tags="9" position="1025,1050" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Banquette" tags="55" position="1200,1175" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Café" tags="60" position="1450,825" size="100,100">Te voilà face à la machine à café, tu peut retirer 0,40€ de ton argent.
+(set: $Pognon to $Pognon - 0.40)\
+
+Lance un dé6 : ca fait (print: (random: 1, 6)).
+
+[[Si tu a fait 1...-&gt;Electocution]]
+[[Si tu a fait 2...-&gt;Réussite café]]
+[[Si tu a fait plus de 2...-&gt;Echec café]]</tw-passagedata><tw-passagedata pid="13" name="Triche" tags="" position="1800,700" size="100,100">On a vu que tu a triché petit galopin :)
+[[Tu est censé aller là|$Prochaine]]</tw-passagedata><tw-passagedata pid="14" name="Electocution" tags="" position="1450,650" size="100,100">Electocution</tw-passagedata><tw-passagedata pid="15" name="Réussite café" tags="" position="1625,1000" size="100,100">Réussite café</tw-passagedata><tw-passagedata pid="16" name="Echec café" tags="" position="1525,1000" size="100,100">Echec café</tw-passagedata><tw-passagedata pid="17" name="$Prochaine" tags="" position="1900,700" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="café avec gestion de la triche" tags="" position="1800,600" size="100,100">Te voilà face à la machine à café, tu peut retirer 0,40€ de ton argent.
+(set: $Pognon to $Pognon - 0.40)\
+
+Lance un dé6 : ca fait (set: $de6 to (random: 1, 6)) (print: $de6).
+
+(set: $a to &quot;Triche&quot;, $b to &quot;Triche&quot;, $c to &quot;Triche&quot;)
+(if: $de6 is 1)[(set: $Prochaine to &quot;Electocution&quot;, $a to &quot;Electocution&quot;)]
+(else-if: $de6 is 2)[(set: $Prochaine to &quot;Echec café&quot;, $b to &quot;Echec café&quot;)]
+(else: )[(set: $Prochaine to &quot;Réussite café&quot;, $c to &quot;Réussite café&quot;)]
+
+[[Si tu a fait 1-&gt;$a]]
+[[Si tu a fait 2-&gt;$b]]
+[[Si tu a fait plus de 2-&gt;$c]]</tw-passagedata><tw-passagedata pid="19" name="$a" tags="" position="1900,600" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="$b" tags="" position="2000,600" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="$c" tags="" position="2100,600" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
