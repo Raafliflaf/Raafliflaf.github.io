@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Théodule aux Augustins" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4126091E-2402-4D59-B4AD-022BCAE4A0F5" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="+-1-Moral" color="green"></tw-tag>,<tw-tag name="+1_Moral" color="green"></tw-tag>,<tw-tag name="-1_MORAL" color="orange"></tw-tag>,<tw-tag name="-5_points-d&#39;amitiés" color="orange"></tw-tag>,<tw-tag name="AMIS:-Gavoille-et-Guiguitaré" color="green"></tw-tag>,<tw-tag name="Amis" color="blue"></tw-tag>,<tw-tag name="Ben" color="purple"></tw-tag>,<tw-tag name="Couteau" color="blue"></tw-tag>,<tw-tag name="Déces" color="red"></tw-tag>,<tw-tag name="Gavoille" color="purple"></tw-tag>,<tw-tag name="Guiguitaré" color="purple"></tw-tag>,<tw-tag name="JE" color="gray"></tw-tag>,<tw-tag name="Jiacoma" color="purple"></tw-tag>,<tw-tag name="Pert-tout-ton-argent" color="orange"></tw-tag><tw-passagedata pid="1" name="Départ" tags="1 Jiacoma" position="375,700" size="200,200">Tu est un nouvel élève au lycée des Augustins. Ici tu pourra rencontrer  M Jiacoma qui te montrera quelques lieux importants.
+<tw-storydata name="Théodule aux Augustins" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4126091E-2402-4D59-B4AD-022BCAE4A0F5" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="+-1-Moral" color="green"></tw-tag>,<tw-tag name="+1_Moral" color="green"></tw-tag>,<tw-tag name="-1_MORAL" color="orange"></tw-tag>,<tw-tag name="-5_points-d&#39;amitiés" color="orange"></tw-tag>,<tw-tag name="AMIS:-Gavoille-et-Guiguitaré" color="green"></tw-tag>,<tw-tag name="Amis" color="blue"></tw-tag>,<tw-tag name="Ben" color="purple"></tw-tag>,<tw-tag name="Couteau" color="blue"></tw-tag>,<tw-tag name="Déces" color="red"></tw-tag>,<tw-tag name="Gavoille" color="purple"></tw-tag>,<tw-tag name="Guiguitaré" color="purple"></tw-tag>,<tw-tag name="JE" color="gray"></tw-tag>,<tw-tag name="Jiacoma" color="purple"></tw-tag>,<tw-tag name="Johan" color="purple"></tw-tag>,<tw-tag name="Perd_le_pin&quot;s" color="orange"></tw-tag>,<tw-tag name="Pert-tout-ton-argent" color="orange"></tw-tag>,<tw-tag name="Pin&#39;s" color="blue"></tw-tag><tw-passagedata pid="1" name="Départ" tags="1 Jiacoma" position="375,700" size="200,200">Tu est un nouvel élève au lycée des Augustins. Ici tu pourra rencontrer  M Jiacoma qui te montrera quelques lieux importants.
 Jiacoma : Salut Théodule! Tu peut te rendre à l&#39;un des endroits suivants :
 [[Tu vois ici c&#39;est mon bureau|Bureau de Jiac]],
 [[là il y a les toilettes|Toilettes]],
@@ -44,10 +44,10 @@ Santé Mentale : (print: $S_M)
 
 Inventaire :
 	(set: $Pognon to 10)\
-	Pognon : (print: $Pognon)€
-	(set: $Mains to 2)\
-	Nombre de Mains : (print: $Mains)
-	Objets : rien pour l&#39;instant.\
+   	Pognon : (print: $Pognon)€
+   	(set: $Mains to 2)\
+    Nombre de Mains : (print: $Mains)
+    Objets : rien pour l&#39;instant.\
 	(set: $Objets to (ds: ))\
 
 Amitiés : Pas encore mais peut etre bientot ;)
@@ -63,7 +63,11 @@ Tu gagnes un point de moral. (set: $Moral to $Moral + 1)
 Espérons qu&#39;ils soient sains d&#39;esprit...
 Lance un dé6: (random: 1, 6)
 [[Si tu fais 4...|Pas d&#39;amis]]
-[[Sinon...|Amis]]</tw-passagedata><tw-passagedata pid="11" name="Banquette" tags="55" position="1600,1350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Café" tags="60 JE" position="1750,900" size="100,100">Te voilà face à la machine à café, tu peut retirer 0,40€ de ton argent.
+[[Sinon...|Amis]]</tw-passagedata><tw-passagedata pid="11" name="Banquette" tags="55 Pin&#39;s" position="1800,1300" size="100,100">Alors que tu t&#39;approches des banquettes, tu trouves une sorte de pin&#39;s par terre. En l&#39;examinant tu as l&#39;impression qu&#39;il représente un rat cornu.
+(set: $Objets to $Objets + (ds: &quot;Pin&#39;s&quot;))\
+Qu&#39;en fais tu ?
+[[Tu le gardes pout toi meme|Sieste]].
+[[Tu demandes aux autres gens assis si ils savent à qui il est|Il est à qui?]]</tw-passagedata><tw-passagedata pid="12" name="Café" tags="60 JE" position="1750,900" size="100,100">Te voilà face à la machine à café, tu peut retirer 0,40€ de ton argent.
 (set: $Pognon to $Pognon - 0.40)\
 
 Lance un dé6 : ca fait (print: (random: 1, 6)).
@@ -91,7 +95,17 @@ Lance un dé6 : ca fait (set: $de6 to (random: 1, 6)) (print: $de6).
 Ne t&#39;en fais pas, il existe d&#39;exellents anti-dépresseurs pour pas cher.
 En tous cas, retire 5 point d&#39;amitiés et [[va en cours|Retard]] car la sonnerie a retentit pour la premiere fois.</tw-passagedata><tw-passagedata pid="23" name="Amis" tags="JE 83 Pert-tout-ton-argent Amis Gavoille Guiguitaré" position="1450,1450" size="100,100">Ajoute Gavoille et GuiGuiTaré dans ta liste d&#39;amis, tu as pu les convaincre par l&#39;argent de se lier d&#39;amitié avec toi. Retire tout ton argent de ton inventaire et [[va en cours|Retard]] car la sonnerie a retentit.
 (set: $Pognon to 0)
-(set: $Amis to $Amis + (ds: &quot;Gavoille&quot;, &quot;GuiGuiTaré&quot;)</tw-passagedata><tw-passagedata pid="24" name="Retard" tags="" position="1125,1550" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(set: $Amis to $Amis + (ds: &quot;Gavoille&quot;, &quot;GuiGuiTaré&quot;)</tw-passagedata><tw-passagedata pid="24" name="Retard" tags="" position="1125,1550" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="Sieste" tags="87" position="1500,1650" size="100,100">Tu passes une heure tranquille, à somnoler dans la douceur de la banquette. Or au bout de quelque temps, tu entend des gens parler d&#39;un DS, c&#39;est étrange car tu croyais ne pas avoir cours.
+Pendent que tu continues tout de même scrupuleusement ton petit somme, un genre de gringalet t&#39;interpelle depuis une table dans l&#39;ombre à l&#39;autre bout de la salle.
+
+[[Viens, on t&#39;as vu.|Danger]] Intrigué, tu te lèves et va le voir.</tw-passagedata><tw-passagedata pid="26" name="Il est à qui?" tags="17 Johan Perd_le_pin&quot;s" position="1825,1650" size="100,100">Tu regrette instantanémant d&#39;avoir demandé à haute voix si quelqu&#39;un connaitrait le propriétaire du pin&#39;s, lorsque tu vois se pôser sur toi les yeux globuleux de ce...type à la barbe aussi mal rasée qu&#39;aux cheveux huilés.
+
+lance un dé6, ca fait : (random: 1, 6).
+
+[[Si tu fais 5 ou 6 tu perd le pin&#39;s.|JOHAN]]
+Si tu fais un autre score [[va en cours|Retard]] fuir cette anomalie qui aurait effrayé David Cronenberg, et n&#39;oublie pas de te retirer le pin&#39;s.
+
+(set: $Objets to $Objets - (ds: &quot;Pin&#39;s&quot;))</tw-passagedata><tw-passagedata pid="27" name="Danger" tags="" position="775,2100" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="JOHAN" tags="" position="1900,1900" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
