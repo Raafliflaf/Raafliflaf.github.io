@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Théodule aux Augustins" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4126091E-2402-4D59-B4AD-022BCAE4A0F5" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="+-1-Moral" color="green"></tw-tag>,<tw-tag name="+1_Charisme" color="green"></tw-tag>,<tw-tag name="+1_Moral" color="green"></tw-tag>,<tw-tag name="-1_MORAL" color="orange"></tw-tag>,<tw-tag name="-1_Moral" color="orange"></tw-tag>,<tw-tag name="-1_Santé-Mentale" color="orange"></tw-tag>,<tw-tag name="-2_MORAL" color="orange"></tw-tag>,<tw-tag name="-5_points-d&#39;amitiés" color="orange"></tw-tag>,<tw-tag name="AMIS:-Gavoille-et-Guiguitaré" color="green"></tw-tag>,<tw-tag name="Amis" color="blue"></tw-tag>,<tw-tag name="Ben" color="purple"></tw-tag>,<tw-tag name="Bengala" color="purple"></tw-tag>,<tw-tag name="Couteau" color="blue"></tw-tag>,<tw-tag name="Déces" color="red"></tw-tag>,<tw-tag name="Gavoille" color="purple"></tw-tag>,<tw-tag name="Guiguitaré" color="purple"></tw-tag>,<tw-tag name="JE" color="gray"></tw-tag>,<tw-tag name="Jiacoma" color="purple"></tw-tag>,<tw-tag name="Johan" color="purple"></tw-tag>,<tw-tag name="Pampelune" color="blue"></tw-tag>,<tw-tag name="Perd_le_pin&quot;s" color="orange"></tw-tag>,<tw-tag name="Pert-tout-ton-argent" color="orange"></tw-tag>,<tw-tag name="Pin&#39;s" color="blue"></tw-tag><tw-passagedata pid="1" name="Départ" tags="1 Jiacoma" position="1973,715" size="200,200">Tu est un nouvel élève au lycée des Augustins. Ici tu pourra rencontrer  M Jiacoma qui te montrera quelques lieux importants.
+<tw-storydata name="Théodule aux Augustins" startnode="1" creator="Twine" creator-version="2.3.5" ifid="4126091E-2402-4D59-B4AD-022BCAE4A0F5" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="+-1-Moral" color="green"></tw-tag>,<tw-tag name="+1_Charisme" color="green"></tw-tag>,<tw-tag name="+1_Intelligence" color="green"></tw-tag>,<tw-tag name="+1_Moral" color="green"></tw-tag>,<tw-tag name="-1_MORAL" color="orange"></tw-tag>,<tw-tag name="-1_Moral" color="orange"></tw-tag>,<tw-tag name="-1_Santé-Mentale" color="orange"></tw-tag>,<tw-tag name="-2_MORAL" color="orange"></tw-tag>,<tw-tag name="-5_points-d&#39;amitiés" color="orange"></tw-tag>,<tw-tag name="AMIS:-Gavoille-et-Guiguitaré" color="green"></tw-tag>,<tw-tag name="Amis" color="blue"></tw-tag>,<tw-tag name="Ben" color="purple"></tw-tag>,<tw-tag name="Bengala" color="purple"></tw-tag>,<tw-tag name="Couteau" color="blue"></tw-tag>,<tw-tag name="Déces" color="red"></tw-tag>,<tw-tag name="Gavoille" color="purple"></tw-tag>,<tw-tag name="Guiguitaré" color="purple"></tw-tag>,<tw-tag name="JE" color="gray"></tw-tag>,<tw-tag name="Jiacoma" color="purple"></tw-tag>,<tw-tag name="Johan" color="purple"></tw-tag>,<tw-tag name="Nuit" color="red"></tw-tag>,<tw-tag name="Pampelune" color="blue"></tw-tag>,<tw-tag name="Perd_le_pin&quot;s" color="orange"></tw-tag>,<tw-tag name="Pert-tout-ton-argent" color="orange"></tw-tag>,<tw-tag name="Pin&#39;s" color="blue"></tw-tag>,<tw-tag name="Ayan" color="purple"></tw-tag>,<tw-tag name="Raphael" color="purple"></tw-tag>,<tw-tag name="Faustin" color="purple"></tw-tag>,<tw-tag name="Mathilde" color="purple"></tw-tag><tw-passagedata pid="1" name="Départ" tags="1 Jiacoma" position="1973,715" size="200,200">Tu est un nouvel élève au lycée des Augustins. Ici tu pourra rencontrer  M Jiacoma qui te montrera quelques lieux importants.
 Jiacoma : Salut Théodule! Tu peut te rendre à l&#39;un des endroits suivants :
 [[Tu vois ici c&#39;est mon bureau|Bureau de Jiac]],
 [[là il y a les toilettes|Toilettes]],
@@ -34,7 +34,7 @@ DS damain !&quot;
 Tu peut :
 [[essayer de lui fracasser son crane de chauve|Baston]].
 [[essayer de réviser avec tes camarades|Révisions]].
-[[essayer de lui poser des questions sur le DS|Question]].</tw-passagedata><tw-passagedata pid="6" name="Initialisation" tags="startup" position="1667,394" size="200,100">Pour jouer il faut que tu notes ta fiche de personnage :
+[[essayer de lui poser des questions sur le DS|Question]].</tw-passagedata><tw-passagedata pid="6" name="Initialisation" tags="startup" position="1680.3333333333335,394" size="200,100">Pour jouer il faut que tu notes ta fiche de personnage :
 
 (set: $Charisme to (random: 2, 4))\
 Charisme :		(print: $Charisme)
@@ -121,7 +121,23 @@ lance un dé6, ca fait : (random: 1, 6).
 [[Si tu fais 5 ou 6 tu perd le pin&#39;s.|JOHAN]]
 Si tu fais un autre score [[va en cours|Retard]] fuir cette anomalie qui aurait effrayé David Cronenberg, et n&#39;oublie pas de te retirer le pin&#39;s.
 
-(set: $Objets to $Objets - (ds: &quot;Pin&#39;s&quot;))</tw-passagedata><tw-passagedata pid="27" name="Danger" tags="" position="2721,2113" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="JOHAN" tags="Johan 85" position="3441,1833" size="100,100">La personne qui, sur le suil de ta conscience, tente de te faire remarquer sa présence en gesticulant et en s&#39;écriant : &quot;T&#39;essaie de m&#39;ignorer là !?&quot;
+(set: $Objets to $Objets - (ds: &quot;Pin&#39;s&quot;))</tw-passagedata><tw-passagedata pid="27" name="Danger" tags="95 Ayan Raphael Faustin Mathilde" position="2831,2198" size="100,100">Un type que tu n&#39;avait pas encore vu jusque là te force à t&#39;assoir et dit :
+&quot;On le recrute.&quot;
+Les autres hochent la tête les uns après les autres après t&#39;avoir considéré d&#39;un air, tour à tour méfiant, étonné, inquiet et désaprobatrice.
+
+Ton &quot;masseur&quot; damande alors : &quot;Je ne vois pas ce que tu lui trouve d&#39;inconvenant...* pas de réponse...*
+
+-Moi c&#39;est Avan, ici on prépare un gros coup. Tu connait le syndicat des voleurs ?
+*celui à sa droite le coupe :* -On est sur le point de coler les copies de Bengala. Mais pour savoir si tu est digne de nous rejoindre, tu va devoir faire tes preuves...
+*celui au bout à gauche :*-Arrête de tourner autour du pot Ra^haël, il faut que tu dérobes le slip de Bazot.
+-Sans qu&#39;il s&#39;en rendes compte !
+*derrière toi :*-Tu t&#39;en sens capable ?&quot;
+
+Avant que tu ait le temps de répondre, ils s&#39;en vont.
+Rends toi en philo en passant par le [[couloir|Couloir]].
+
+Et ajoutes un insigne à ton inventaire.
+(set: $Objets to $Objets + (ds: &quot;Insigne&quot;))</tw-passagedata><tw-passagedata pid="28" name="JOHAN" tags="Johan 85" position="3441,1833" size="100,100">La personne qui, sur le suil de ta conscience, tente de te faire remarquer sa présence en gesticulant et en s&#39;écriant : &quot;T&#39;essaie de m&#39;ignorer là !?&quot;
 Ce à quoi tu réponds : &quot;Euh...non, c&#39;est le tien ?
 -Non mais j&#39;le prend quand même. &#39;fin merci. J&#39;mapelle Johan et toi ?
 -Théodule.
@@ -132,7 +148,7 @@ Si tu est absolument résolu à être asocial, [[reste seul|Retard]].
 Sinon tu peut [[le suivre à travers les méandres du couloir|Viol Mental]].</tw-passagedata><tw-passagedata pid="29" name="Viol Mental" tags="Johan 80 -1_Santé-Mentale" position="3359,2007" size="100,100">Tu peines à le suivre dans les couloirs blindés de monde tant il marche vite. Après avoir traversé tout le lycée, et alors que la fule se résorbe doucement; tu entre dans la salle H114 où ton guide s&#39;est engouffré.
 Profitant de ton instant d&#39;incompréhention du à la vacuité de cette salle sui devait être remplie; il te plaque contre le mur et sourit niaisement à quelques centimètres de ton visage. Ces yeux, semblables à des bulbes démoniaques pénètrent les recoins les plus éloignés de ton âme; saccagnt, pillent et violent la moindre once d&#39;innocence qui aurait plu te rester.
 
-Tu perds 1 point de Santé Mentale et [[tu vas en cours de philo|Cours de Philo]].</tw-passagedata><tw-passagedata pid="30" name="Cours de Philo" tags="" position="2745,3259" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="Baston" tags="88 JE Bengala" position="1604,1348" size="100,100">Tu as décidé de ne pas te laisser marcher sur les pieds dès le jour de la rentrée par un chauve. Malheureusement pour toi, M Bengala est un expert de Krav Maga...
+Tu perds 1 point de Santé Mentale et [[tu vas en cours de philo|Cours de Philo]].</tw-passagedata><tw-passagedata pid="30" name="Cours de Philo" tags="" position="2745,3259" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="Baston" tags="88 JE Bengala" position="1119,1406" size="100,100">Tu as décidé de ne pas te laisser marcher sur les pieds dès le jour de la rentrée par un chauve. Malheureusement pour toi, M Bengala est un expert de Krav Maga...
 
 Si tu as un couteau dans ton inventaire (if: ($Objets contains &quot;Schlass&quot;))[(en effet c&#39;est le cas)](else: )[(mais on sait tous que tu n&#39;en a pas)
 [[tu peut l&#39;utiliser|Couteau]].
@@ -147,13 +163,20 @@ ou aller te branler les couilles [[à la maison des lycéens|Maison des lycéens
 Ce à quoi il te répond du tac au tac :&quot;ANAL si tu n&#39;étudies pas !&quot;
 Son sourire carnassier ne te sortira pas de la tête de sitot. Tu perds un point de Santé Mentale et un de moral. (set: $S_M to $S_M - 1, $Moral to $Moral - 1)
 
-Dans ta tristitude [[tu décides d&#39;aller réviser|Révisions]].</tw-passagedata><tw-passagedata pid="36" name="Couteau" tags="45 JE Bengala +1_Charisme +1_Moral" position="1403,1675" size="100,100">Tu sors ton couteau de ta poche et le monaces.
+Dans ta tristitude [[tu décides d&#39;aller réviser|Révisions]].</tw-passagedata><tw-passagedata pid="36" name="Couteau" tags="45 JE Bengala +1_Charisme +1_Moral" position="567,1722" size="100,100">Tu sors ton couteau de ta poche et le monaces.
 M Bengala lache l&#39;affaire et accepte de te fournir des notes à la hauteur.
 Tu gagnes 1 point de charisme, et 1 point de moral.
 
 [[Tu retournes dans le couloir pour aller à ton prochain cours.|Couloir]]</tw-passagedata><tw-passagedata pid="37" name="Mort générique" tags="70 JE Déces" position="0,1860" size="100,100">Tu as cherché la merde avec la mauvaise personne,
 DOMMAGE
-[[Partie terminée...|Déces]]</tw-passagedata><tw-passagedata pid="38" name="Couloir" tags="" position="1789,3268" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Travail" tags="" position="1773,1878" size="100,100">travail</tw-passagedata><tw-passagedata pid="40" name="Groupe" tags="34" position="2098,1883" size="100,100">Tu arrives devant le groupe de tes camarades, et tu leur dit :
+[[Partie terminée...|Déces]]</tw-passagedata><tw-passagedata pid="38" name="Couloir" tags="" position="1293.3333333333333,2687.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Travail" tags="82" position="1773,1878" size="100,100">Tu te lance dans ton cahier avec l&#39;ardeur d&#39;une gaufre essouflée, avec l&#39;espoir d&#39;engranger une montagne de conaissances nouvelles.
+Tu fait le calcul suivant : 
+Succès = Intelligence + Moral + 2dés6
+Succès = $Intelligence + $Moral +(print: (random: 1,6) + (random: 1,6))
+
+[[Si ton succès est supérieur ou égal à 16|Réussite Travail]],
+[[Si ton succès est égal à 7 ou moins|Echec critique Travail]],
+[[Sinon|Echec simple Travail]].</tw-passagedata><tw-passagedata pid="40" name="Groupe" tags="34" position="2098,1883" size="100,100">Tu arrives devant le groupe de tes camarades, et tu leur dit :
 
 [[&quot;Ca vous dit on révise ensemble ?&quot;|Travail]] (et tu gagnes un point de moral)\
 (click: &quot;Ca vous dit on révise ensemble ?&quot;)[(set: $Moral to $Moral + 1)]\
@@ -166,12 +189,13 @@ Lance un dé6, ca fait (random: 1, 6).
 
 [[Si tu as fait moins que ton intelligence(qui est de  $Intelligence)|Réf]].
 [[Si tu as fait plus que ton intelligence|Je sait pas]].
-[[Si tu fait 6|Ecrasé]].</tw-passagedata><tw-passagedata pid="42" name="Réf" tags="Gavoille 91" position="1837,2218" size="100,100">Enthousiaste, tu lui sort : &quot;Oh c&#39;est l&#39;anus du monde...&quot;
+[[Si tu fait 6|Ecrasé]].</tw-passagedata><tw-passagedata pid="42" name="Réf" tags="Gavoille 91 Déces" position="1868,2279" size="100,100">(set: _d to &quot;Mort générique&quot;)
+Enthousiaste, tu lui sort : &quot;Oh c&#39;est l&#39;anus du monde...&quot;
 Ce à quoi la baleine de Pontarlier répond par une sorte d&#39;expiration de jouissance apathique.
 
 Maintenant tu peut dire :
 [[Bon, c&#39;est pas le trou mais le tampax, et aller travailler.|Travail]]
-[[T&#39;as pas de la bouffe ?|Mort générique]]
+[[T&#39;as pas de la bouffe ?|_d]]
 Si tu a déjà perdu de la santé mentale,(if: $S_M is not 3)[(et c&#39;est le cas)] tu as le droit de sortir :
 [[Tu sait que tu me fait penser à un TARDIS, mais inversé.|Blague TARDIS]]</tw-passagedata><tw-passagedata pid="43" name="Je sait pas" tags="Gavoille 27" position="2382,2077" size="100,100">Tu restes humble, et tu lui réponds que tu veut bien découvrir. A partir de cet instant, &quot;Gavoille&quot; se met en tête - avec une bandaison à peine voilée - de téduquer aux mystères de ces obscurs dieux du Youtubegame Francais.
 
@@ -193,7 +217,21 @@ Au bout de 5mg de Morphine en équivalent douleur, tu agis: &quot;Bon arrête l�
 En grognant de déception, Gravoille ramasse ton sac et le sien, puis [[vous vous engegez dans le couloir en direction de la prochaine épreuve|Cours de Philo]].</tw-passagedata><tw-passagedata pid="46" name="Meilleurs amis" tags="47 Gavoille" position="2355,2356" size="100,100">Tu en tames avec Gravoille une longue, mais revigirante discussion qui alterne entre Wankil Studio et tes chagrins personnels, en passant entre autres, par Undertale et Minecraft.
 Maintenant, cette motte de beurre vivante est ton meilleur ami; ajoutes en une à ton inventaire. (set: $Objets to $Objets + (ds: &quot;Motte de beurre&quot;))
 
-Dans la joie et la bonne humeur, tu passes par le [[couloir|Couloir]] pour aller en philo.</tw-passagedata></tw-storydata>
+Dans la joie et la bonne humeur, tu passes par le [[couloir|Couloir]] pour aller en philo.</tw-passagedata><tw-passagedata pid="47" name="Réussite Travail" tags="JE 3 +1_Intelligence +1_Moral" position="1396,1934" size="100,100">Les cours t&#39;apparaissent comme une évidence, les plans détaillés se révèlent magiquement, les exercices s&#39;enchainent; tu n&#39;a pas besoin de correction, TU ES LA CORRECTION !
+Tu gagnes un point d&#39;intelligence et un point de moral.
+(set: $Intelligence to $Intelligence + 1)
+[[Passe par le couloir pour aller en cours.|Couloir]]</tw-passagedata><tw-passagedata pid="48" name="Echec critique Travail" tags="74 -1_Moral" position="1613,1644" size="100,100">Les phrases s&#39;emmèlent entre elles, alors que tu essaies de les comprendre, les mots volent, et le notions te violent.
+Tu es certain d&#39;en faire des cauchemards cette nuit.
+
+[[Tu perds un point de Moral.|Nuit]]</tw-passagedata><tw-passagedata pid="49" name="Echec simple Travail" tags="" position="1554,2170.6666666666665" size="100,100">Tu te rends compte que cette tentative ne portera jamais ses fruits.
+
+Vas en philo en passant par le [[couloir|Couloir]].</tw-passagedata><tw-passagedata pid="50" name="Nuit" tags="Nuit 24" position="1201.3333333333333,1692.3333333333333" size="100,100">Noir.
+Tu te réveilles soudaineent, effrayé et en sueur.
+(link: &quot;AAAAAAAH!&quot;)[==
+
+Francois 1er te pourchasse, tu essaies de courir, mais tu n&#39;arrives qu&#39;a tomber de ta chaise.
+
+Quand tu réussis à reprendre tes esprits, tu te rend compte que tu t&#39;es endormi en travaillant, et qu&#39;il fait nuit.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
