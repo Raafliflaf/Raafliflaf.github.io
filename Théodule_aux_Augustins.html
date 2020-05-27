@@ -274,9 +274,9 @@ Ajoutes Geoffroy à ta liste d&#39;amis et vas en [[Cours de Philo]].
 [[Partie terminée|$d]].</tw-passagedata><tw-passagedata pid="53" name="Attrape le slip" tags="31 JE Test-de-stat" position="1845,3252" size="100,100">Tu t&#39;avances tranquillement vers M. Bazeaux tant qu&#39;il a le dos tourné :
 
 Si ta dextérité($Dexterite) est de 4 ou plus [[va ici|Réussite Slip]].
-Sinon [[va la|Echec Slip]]</tw-passagedata><tw-passagedata pid="54" name="Rire" tags="23 Bazeaux -Main JE Test-de-stat" position="2190,3288" size="100,100">Après avoir commencé le cours par son rire iconique rappelant un ventilateur asmathique, M. Bazeaux te fait copier le cours pendant toute l&#39;heure. Lances un dé6, ca fait (random: 1, 6).
+Sinon [[va la|Echec Slip]]</tw-passagedata><tw-passagedata pid="54" name="Rire" tags="23 Bazeaux -Main JE Test-de-stat" position="2190,3286.3333333333335" size="100,100">Après avoir commencé le cours par son rire iconique rappelant un ventilateur asmathique, M. Bazeaux te fait copier le cours pendant toute l&#39;heure. Lances un dé6, ca fait (random: 1, 6).
 
-Si le résultat est inférieur à ta force, ton cours est copié en entier, [[ajoutes-le à ton inventaire|Approche]].
+Si le résultat est inférieur à ta force ($Force), ton cours est copié en entier, [[ajoutes-le à ton inventaire|Approche]].
 Sinon, tu t&#39;es cassé la main. [[Supprimes la de ton inventaire.|Approche]]
 
 (click: &quot;ajoutes-le à ton inventaire&quot;)[(set: $Objets to $Objets + (ds: &quot;35 pages de la vie et les oeuvres de Descartes&quot;))]
@@ -296,9 +296,9 @@ Tu demandes timidement ce qu&#39;is feront de ce slip, Ayan te réponds &quot;(t
 [[Continues|Nouvelle Mission]].</tw-passagedata><tw-passagedata pid="58" name="Approche" tags="Bazeaux 78 Test-de-stat" position="2291,3546" size="100,100">Alors que tu ranges les feuilles de ce cours, M. Bazeaux s&#39;approche de toi.
 
 Si ta santé mentale ($S_M) est inférieure ou égale à 2, [[vas ici|Hallucination]].
-Sinon, [[ves là|Mains]].</tw-passagedata><tw-passagedata pid="59" name="Hallucination" tags="64 Bazeaux" position="2529,3618" size="200,100">Ta vision se brouille. Alors que Benjamin Bazeaux s&#39;approche de toi, tu as de plus en plus l&#39;impression qu&#39;il ressemble à Gustave Courbet.
+Sinon, [[vas là|Mains]].</tw-passagedata><tw-passagedata pid="59" name="Hallucination" tags="64 Bazeaux" position="2529,3618" size="200,100">Ta vision se brouille. Alors que Benjamin Bazeaux s&#39;approche de toi, tu as de plus en plus l&#39;impression qu&#39;il ressemble à Gustave Courbet.
 D&#39;un coup d&#39;un seul, il fait voler ses vêtements; et s&#39;allonge sur la table.
-Il se saisit d&#39;un volume de Die Wervandlung, et prend la pose des Dieux du Stade.
+Il se saisit d&#39;un volume de Die Wervandlung *pour cacher ses attributs*, et prend la pose des Dieux du Stade...
 
 Soit [[tu fais comme si de rien était|Mains]].
 Soit [[tu lui sort un &quot;No Ho Mo !&quot;|Camisole]].
@@ -345,7 +345,7 @@ Tu peut :
 [[T&#39;enfuit loin de ces dangereux individus|Cantine Seul]], 
 ou [[rester avec eux|Nouvelle Mission]].</tw-passagedata><tw-passagedata pid="66" name="Excuses" tags="70 JE Déces" position="2638,4165" size="100,100">Tu as cherché la merde avec la mauvaise personne,
 DOMMAGE
-[[Partie terminée...|$d]]</tw-passagedata><tw-passagedata pid="67" name="Cantine Seul" tags="" position="2354,4434" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="68" name="Nouvelle Mission" tags="16 Ayan Faustin Mathilde Raphael" position="1761,3973" size="100,100">Swamem t&#39;emmene dans le recoin sombre derrière le foyer de la cantine et d&#39;un air sinistre annonce une nouvelle mission :
+[[Partie terminée...|$d]]</tw-passagedata><tw-passagedata pid="67" name="Cantine Seul" tags="" position="3007.3333333333335,4920.666666666667" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="68" name="Nouvelle Mission" tags="16 Ayan Faustin Mathilde Raphael" position="1761,3973" size="100,100">Swamem t&#39;emmene dans le recoin sombre derrière le foyer de la cantine et d&#39;un air sinistre annonce une nouvelle mission :
 &quot;Bon, pour accomplir cette mssion qui consoste à dérober des desserts on va se dispacher en équiper. J&#39;irai avec le nouveau, et Faustin, Mathilde et Raphaël vou irez ensemble.&quot; Ce à quoi Mathilde répond :
 &quot;Il faudra être stratégique, et prendre en compte les champs de vision de tous les surveillants.&quot;
 
@@ -354,7 +354,7 @@ DOMMAGE
 [[Tu peut essayer de le cacher sous ton pain|Pain]].
 [[Tu peut tenter la discrétion en la cachant dans ta poche|Poche]].
 [[Tu peut t&#39;enfuir avecc un max de desserts en courant|Enfuit en courant]] (si t&#39;es fort).
-[[Ou tu peut tenter de baratiner le serveur|Baratin]] (si t&#39;es beau).</tw-passagedata><tw-passagedata pid="70" name="Pain" tags="56" position="1114,4375" size="100,100">Tu caches le dessert sous ton morceau de pain, et tu stresse comme un gamin qui passe le Brevet alors que Tiffanny scanne ton visage. 
+[[Ou tu peut tenter de baratiner le serveur|Baratin]] (si t&#39;es beau).</tw-passagedata><tw-passagedata pid="70" name="Pain" tags="56" position="1115.6666666666667,4375" size="100,100">Tu caches le dessert sous ton morceau de pain, et tu stresse comme un gamin qui passe le Brevet alors que Tifanny scanne ton visage. 
 Tu sursautes alors qu&#39;elle te sert une double ration de polenta, mais sans être repéré.
 
 Victoire ! [[Tu peut aller fêter la réussite du casse avec tes camarades|Table Mathilde]].</tw-passagedata><tw-passagedata pid="71" name="Poche" tags="39 Geoffroy -1_Intelligence" position="1306,4472" size="100,100">Alors que tu fourre le dessert dans ta poche, tu sent un liquide collant qui te coule entre les doigts.
@@ -379,7 +379,7 @@ Si tu n&#39;en as pas, ou que tu préfères garder ton porte-monnaie plein, [[il
 
 </tw-passagedata><tw-passagedata pid="74" name="Table Mathilde" tags="36 Déces Mathilde" position="971,4620" size="100,100">Tu arrives à la table et leut montres le beignet au nutella en criant : &quot;tadaaa !&quot;
 Tous se lèchent les babines, sauf Mathilde qui te lance un regard noir. Tucommences à chercher une échappatoire quand elle te lance : &quot;Ca te fait rire que je sois allergique aux fruits à coque !?&quot;
-Pendant qu&#39;elle ajuste son neud papillon (*qu&#39;elle ne portait pas auparavant ?*) elle ajoute : &quot;Demons run when a good woman goes to war. Night will fall and drown the sun when a good woman goes to war.&quot;
+Pendant qu&#39;elle ajuste son neud papillon (*qu&#39;elle ne portait pas auparavant ?*) elle ajoute : &quot;Demons run when a good woman goes to war. Night will fall and drown the sun when a good woman goes to war !&quot;
 (set: _m to &quot;Mort générique&quot;) 
 (if: $secret is &quot;OUI&quot;)[
 (set: _m to &quot;195a&quot;)]
@@ -405,11 +405,11 @@ Le rire grincant de Raaphaël*, qui ressemble au son que ferait un maelas de res
 Dans un élan de désespoir, tu décides de te suicider en t&#39;étouffant avec la polenta.
 
 [[Partie terminée|$d]].</tw-passagedata><tw-passagedata pid="77" name="Réussite Fuite" tags="73" position="1851,4746" size="100,100">Tu réussit à t&#39;enfuir et à passer par la fenêtre pour semer tes poursuivants.
-Maintenant, tu te sent un peut seul dehors avec tous ces desserts, donc [[tu repasses par la fenêtre dans l&#39;autre sens pour rejoindre le syndicat des voleurs|Table des voleurs]], qui t&#39;attendent dans la cantine.</tw-passagedata><tw-passagedata pid="78" name="Baston Raad" tags="44 Raad Test-de-stat" position="1599,4781" size="100,100">(set: _m to &quot;Mort générique&quot;)\
+Maintenant, tu te sent un peut seul dehors avec tous ces desserts, donc [[tu repasses par la fenêtre dans l&#39;autre sens pour rejoindre le syndicat des voleurs|Table des voleurs]], qui t&#39;attendent dans la cantine.</tw-passagedata><tw-passagedata pid="78" name="Baston Raad" tags="44 Raad Test-de-stat" position="1602.3333333333335,4781" size="100,100">(set: _m to &quot;Mort générique&quot;)\
 Pas de bol, tu n&#39;était pas assez rapide. Raad t&#39;atrapes par le bras et te plaque au sol. Tu essaie de te débattre, de lui mettre des coups, mais il est plus fort que toi.
 
 Si tu as un couteau, [[tu peut tenter de débloquer la situation|Gagné]], mais gardes en tête que c&#39;est dangereux.
-Si tu n&#39;en as pas, [[laisse toi faire|_m]].</tw-passagedata><tw-passagedata pid="79" name="Sonnerie du TP" tags="84" position="2442,5324" size="100,100">Tu entends la sonnerie qui signifie que tu as TP.
+Si tu n&#39;en as pas, [[laisse toi faire|_m]].</tw-passagedata><tw-passagedata pid="79" name="Sonnerie du TP" tags="84" position="2310.3333333333335,5513.465738932292" size="100,100">Tu entends la sonnerie qui signifie que tu as TP.
 
 Tu peut y aller avec tes amis :
 
@@ -421,7 +421,7 @@ Cette hésitation te permet de te ralancer et de t&#39;enfuir sans être blaqué
 [[REnds toi à table|Table des voleurs]].</tw-passagedata><tw-passagedata pid="81" name="Corruption" tags="6" position="2082,4776" size="100,100">(set: $Pognon to 0)\
 &quot;Bon appétit !&quot; te dit le serveur en te tendant ton deuxième dessert d&#39;une main et en rangeant son pourboire dans sa poche de l&#39;autre.
 
-Tu as réussi ta mission avec succès ! [[Va t&#39;assoir à la table de tes amis|Table des voleurs]].</tw-passagedata><tw-passagedata pid="82" name="Echec du Casse" tags="65 Collégiens Plus-un-voleur" position="2319,4646" size="100,100">Ta mission a échoué.
+Tu as réussi ta mission avec succès ! [[Va t&#39;assoir à la table de tes amis|Table des voleurs]].</tw-passagedata><tw-passagedata pid="82" name="Echec du Casse" tags="65 Collégiens Plus-un-voleur" position="2274,4639.333333333333" size="100,100">Ta mission a échoué.
 Tu marches lentement à travers la cantine cherchant une table, tu n&#39;adressse pas un regard au gang des voleurs à qui tu as trop honte d&#39;annoncer ta défaite.
 
 Tu vas donc manger tout seul.
@@ -433,7 +433,7 @@ Des collégiens viennent alors vers toi et chantent :
  
 [[Tu finis tristement ton assiette.|Sonnerie du TP]]
 
-(set: $Amities to $Amities - (ds: &quot;Ayan&quot;))</tw-passagedata><tw-passagedata pid="83" name="TP JE" tags="" position="2292,5472.333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="84" name="TP Ayan" tags="" position="2442,5472.333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="85" name="TP Justin" tags="" position="2592,5472.333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="86" name="Table des voleurs" tags="86 JE" position="1988.6666666666667,5149.333333333333" size="100,100">Tu  arrives riomphalement à la table de tes employeurs et leur tend le derssert. Ils décident entre eux de qui le mangera (tu ne fait évidemment pas partie des candidats potentiels). 
+(set: $Amities to $Amities - (ds: &quot;Ayan&quot;))</tw-passagedata><tw-passagedata pid="83" name="TP JE" tags="" position="2160.3333333333335,5661.799072265625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="84" name="TP Ayan" tags="" position="2310.3333333333335,5661.799072265625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="85" name="TP Justin" tags="" position="2460.3333333333335,5661.799072265625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="86" name="Table des voleurs" tags="86 JE" position="1988.6666666666667,5149.333333333333" size="100,100">Tu  arrives riomphalement à la table de tes employeurs et leur tend le derssert. Ils décident entre eux de qui le mangera (tu ne fait évidemment pas partie des candidats potentiels). 
 Pendant que tu remplis la caraffe d&#39;eau pour eux, tu te rends compte qu&#39;ils t&#39;exploitent pout être un peu. Tu reviens à table et ils te tendent tous leur verre. Tu les sert, malheureusement, alors que tu n&#39;as pas pu te servir, la caraffe est déjà vide. Alors que tu retournes la remplir, tu te dis que même si tu es un peut exploité, c&#39;est cool d&#39;avoir pu te faire des amis au lycée !
 Quand tu reviens à la table, ils ne sont plus là.
 Tu te dis qu&#39;ils ont probablement déjà fini et qu&#39;ils ont du hésiter à t&#39;attendre, mais que des gens attendaient pour prendre les places. Pourtant, il n&#39;y a personne...
