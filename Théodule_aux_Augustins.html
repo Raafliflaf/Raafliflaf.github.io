@@ -88,7 +88,7 @@ Lance un dé6 : ca fait (print: (random: 1, 6)).
 Tu ne manqueras à personne !
 [[Partie terminée|Déces]]</tw-passagedata><tw-passagedata pid="15" name="Réussite café" tags="JE 52 +1_Moral" position="3515,1067" size="100,100">Le café était délicieux !
 Tu gagnes 1 point de Moral avant de retourner à la [[Maison des lycéens]] .</tw-passagedata><tw-passagedata pid="16" name="Echec café" tags="JE 71 -1_MORAL" position="3395,1067" size="100,100">La machine ne t&#39;as pas donnée ton café. 
-(set: $Moral to $Moral - 1) Tu perds 1 point de moral avant de retourner à la [[Maison des lycéens]].</tw-passagedata><tw-passagedata pid="17" name="$Prochaine" tags="" position="3790,767" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="café avec gestion de la triche" tags="" position="3670,647" size="100,100">Te voilà face à la machine à café, tu peut retirer 0,40€ de ton argent.
+(set: $Moral to $Moral - 1) Tu perds 1 point de moral avant de retourner à la [[Maison des lycéens]].</tw-passagedata><tw-passagedata pid="17" name="$Prochaine" tags="" position="3790,767" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="café avec gestion de la triche" tags="" position="3686.6666666666665,663.6666666666666" size="100,100">Te voilà face à la machine à café, tu peut retirer 0,40€ de ton argent.
 (set: $Pognon to $Pognon - 0.40)\
 
 Lance un dé6 : ca fait (set: $de6 to (random: 1, 6)) (print: $de6).
@@ -100,11 +100,11 @@ Lance un dé6 : ca fait (set: $de6 to (random: 1, 6)) (print: $de6).
 
 [[Si tu a fait 1-&gt;$a]]
 [[Si tu a fait 2-&gt;$b]]
-[[Si tu a fait plus de 2-&gt;$c]]</tw-passagedata><tw-passagedata pid="19" name="$a" tags="" position="3790,667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="$b" tags="" position="3890,667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="$c" tags="" position="3990,667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="Pas d&#39;amis" tags="37 JE -5_points-d&#39;amitiés" position="2920,1442" size="100,100">Ta technique d&#39;approche a très bien fonctionnée. Désormais, tout le monde te déteste.
+[[Si tu a fait plus de 2-&gt;$c]]</tw-passagedata><tw-passagedata pid="19" name="Pas d&#39;amis" tags="37 JE -5_points-d&#39;amitiés" position="2920,1442" size="100,100">Ta technique d&#39;approche a très bien fonctionnée. Désormais, tout le monde te déteste.
 Ne t&#39;en fais pas, il existe d&#39;exellents anti-dépresseurs pour pas cher.
-En tous cas, retire 5 point d&#39;amitiés et [[va en cours|Retard]] car la sonnerie a retentit pour la premiere fois.</tw-passagedata><tw-passagedata pid="23" name="Amis" tags="JE 83 Pert-tout-ton-argent Amis Gavoille Guiguitaré" position="3035,1438" size="100,100">Ajoute Gavoille et GuiGuiTaré dans ta liste d&#39;amis, tu as pu les convaincre par l&#39;argent de se lier d&#39;amitié avec toi. Retire tout ton argent de ton inventaire et [[va en cours|Retard]] car la sonnerie a retentit.
+En tous cas, retire 5 point d&#39;amitiés et [[va en cours|Retard]] car la sonnerie a retentit pour la premiere fois.</tw-passagedata><tw-passagedata pid="20" name="Amis" tags="JE 83 Pert-tout-ton-argent Amis Gavoille Guiguitaré" position="3035,1438" size="100,100">Ajoute Gavoille et GuiGuiTaré dans ta liste d&#39;amis, tu as pu les convaincre par l&#39;argent de se lier d&#39;amitié avec toi. Retire tout ton argent de ton inventaire et [[va en cours|Retard]] car la sonnerie a retentit.
 (set: $Pognon to 0)
-(set: $Amities to $Amities + (ds: &quot;GuiGuiTaré&quot;) + (ds: &quot;Gavoille&quot;))</tw-passagedata><tw-passagedata pid="24" name="Retard" tags="43 -2_MORAL" position="2555,1620" size="100,100">Alors que tu arrives, essouflé en salle de cours, tu apercoit le Bengalibaba qui referme sa caverne.
+(set: $Amities to $Amities + (ds: &quot;GuiGuiTaré&quot;) + (ds: &quot;Gavoille&quot;))</tw-passagedata><tw-passagedata pid="21" name="Retard" tags="43 -2_MORAL" position="2555,1620" size="100,100">Alors que tu arrives, essouflé en salle de cours, tu apercoit le Bengalibaba qui referme sa caverne.
 Enervé, il sort du Bâtiment en disant :&quot;Tu demandera à tes copains pour le DS de demain.&quot;
 (if: $Amities&#39;s length is 0)[*Quel dommage que tu n&#39;en ait pas.*]
 
@@ -112,17 +112,17 @@ Effrayé d&#39;être laissé ainsi dans la solitude tu commence à t&#39;expliqu
 &quot;C&#39;est que...euh...j&#39;ai été prendre...euh...le mauvais bus?&quot;
 Ce à quoi il te rétorque :&quot;Cette excuse c&#39;est comme ta virginité, tu ne peut l&#39;utiliser qu&#39;une fois !&quot;
 
-Après avoir perdu 2 points de moral, (set: $Moral to $Moral - 2)[[tu va réviser|Révisions]].</tw-passagedata><tw-passagedata pid="25" name="Sieste" tags="87" position="2853,1833" size="100,100">Tu passes une heure tranquille, à somnoler dans la douceur de la banquette. Or au bout de quelque temps, tu entend des gens parler d&#39;un DS, c&#39;est étrange car tu croyais ne pas avoir cours.
+Après avoir perdu 2 points de moral, (set: $Moral to $Moral - 2)[[tu va réviser|Révisions]].</tw-passagedata><tw-passagedata pid="22" name="Sieste" tags="87" position="2853,1833" size="100,100">Tu passes une heure tranquille, à somnoler dans la douceur de la banquette. Or au bout de quelque temps, tu entend des gens parler d&#39;un DS, c&#39;est étrange car tu croyais ne pas avoir cours.
 Pendent que tu continues tout de même scrupuleusement ton petit somme, un genre de gringalet t&#39;interpelle depuis une table dans l&#39;ombre à l&#39;autre bout de la salle.
 
-[[Viens, on t&#39;as vu.|Danger]] Intrigué, tu te lèves et va le voir.</tw-passagedata><tw-passagedata pid="26" name="Il est à qui?" tags="17 Johan Perd_le_pin&quot;s" position="3415,1642" size="100,100">Tu regrette instantanémant d&#39;avoir demandé à haute voix si quelqu&#39;un connaitrait le propriétaire du pin&#39;s, lorsque tu vois se pôser sur toi les yeux globuleux de ce...type à la barbe aussi mal rasée qu&#39;aux cheveux huilés.
+[[Viens, on t&#39;as vu.|Danger]] Intrigué, tu te lèves et va le voir.</tw-passagedata><tw-passagedata pid="23" name="Il est à qui?" tags="17 Johan Perd_le_pin&quot;s" position="3415,1642" size="100,100">Tu regrette instantanémant d&#39;avoir demandé à haute voix si quelqu&#39;un connaitrait le propriétaire du pin&#39;s, lorsque tu vois se pôser sur toi les yeux globuleux de ce...type à la barbe aussi mal rasée qu&#39;aux cheveux huilés.
 
 lance un dé6, ca fait : (random: 1, 6).
 
 [[Si tu fais 5 ou 6 tu perd le pin&#39;s.|JOHAN]]
 Si tu fais un autre score [[va en cours|Retard]] fuir cette anomalie qui aurait effrayé David Cronenberg, et n&#39;oublie pas de te retirer le pin&#39;s.
 
-(set: $Objets to $Objets - (ds: &quot;Pin&#39;s&quot;))</tw-passagedata><tw-passagedata pid="27" name="Danger" tags="95 Ayan Raphael Faustin Mathilde" position="2770.6666666666665,2230" size="100,100">Un type que tu n&#39;avait pas encore vu jusque là te force à t&#39;assoir et dit :
+(set: $Objets to $Objets - (ds: &quot;Pin&#39;s&quot;))</tw-passagedata><tw-passagedata pid="24" name="Danger" tags="95 Ayan Raphael Faustin Mathilde" position="2770.6666666666665,2230" size="100,100">Un type que tu n&#39;avait pas encore vu jusque là te force à t&#39;assoir et dit :
 &quot;On le recrute.&quot;
 Les autres hochent la tête les uns après les autres après t&#39;avoir considéré d&#39;un air, tour à tour méfiant, étonné, inquiet et désaprobatrice.
 
@@ -140,7 +140,7 @@ Avant que tu ait le temps de répondre, ils s&#39;en vont.
 Rends toi en philo en passant par le [[couloir|Couloir]].
 
 Et ajoutes un insigne à ton inventaire.
-(set: $Objets to $Objets + (ds: &quot;Insigne&quot;))</tw-passagedata><tw-passagedata pid="28" name="JOHAN" tags="Johan 85" position="3472,1966" size="100,100">La personne qui, sur le suil de ta conscience, tente de te faire remarquer sa présence en gesticulant et en s&#39;écriant : &quot;T&#39;essaie de m&#39;ignorer là !?&quot;
+(set: $Objets to $Objets + (ds: &quot;Insigne&quot;))</tw-passagedata><tw-passagedata pid="25" name="JOHAN" tags="Johan 85" position="3472,1966" size="100,100">La personne qui, sur le suil de ta conscience, tente de te faire remarquer sa présence en gesticulant et en s&#39;écriant : &quot;T&#39;essaie de m&#39;ignorer là !?&quot;
 Ce à quoi tu réponds : &quot;Euh...non, c&#39;est le tien ?
 -Non mais j&#39;le prend quand même. &#39;fin merci. J&#39;mapelle Johan et toi ?
 -Théodule.
@@ -148,64 +148,64 @@ Han, c&#39;est vraiment un nom de Nigaud ca ! *Il regarde sa montre.* Merde ! On
 Il s&#39;en va dans le couloir.
 
 Si tu est absolument résolu à être asocial, [[reste seul|Retard]].
-Sinon tu peut [[le suivre à travers les méandres du couloir|Viol Mental]].</tw-passagedata><tw-passagedata pid="29" name="Viol Mental" tags="Johan 80 -1_Santé-Mentale" position="3190,2292" size="100,100">Tu peines à le suivre dans les couloirs blindés de monde tant il marche vite. Après avoir traversé tout le lycée, et alors que la fule se résorbe doucement; tu entre dans la salle H114 où ton guide s&#39;est engouffré.
+Sinon tu peut [[le suivre à travers les méandres du couloir|Viol Mental]].</tw-passagedata><tw-passagedata pid="26" name="Viol Mental" tags="Johan 80 -1_Santé-Mentale" position="3190,2292" size="100,100">Tu peines à le suivre dans les couloirs blindés de monde tant il marche vite. Après avoir traversé tout le lycée, et alors que la fule se résorbe doucement; tu entre dans la salle H114 où ton guide s&#39;est engouffré.
 Profitant de ton instant d&#39;incompréhention du à la vacuité de cette salle sui devait être remplie; il te plaque contre le mur et sourit niaisement à quelques centimètres de ton visage. Ces yeux, semblables à des bulbes démoniaques pénètrent les recoins les plus éloignés de ton âme; saccagnt, pillent et violent la moindre once d&#39;innocence qui aurait plu te rester.
 
-Tu perds 1 point de Santé Mentale et [[tu vas en cours de philo|Cours de Philo]].</tw-passagedata><tw-passagedata pid="30" name="Cours de Philo" tags="89 JE Bazeaux" position="1950,2948" size="200,200">Tu entres dans le cours de Philo, si le gang des voleurs t&#39;as déjà interpellé, tu peux tenter d&#39;arracher à M. Bazeaux ta cible :
+Tu perds 1 point de Santé Mentale et [[tu vas en cours de philo|Cours de Philo]].</tw-passagedata><tw-passagedata pid="27" name="Cours de Philo" tags="89 JE Bazeaux" position="1950,2948" size="200,200">Tu entres dans le cours de Philo, si le gang des voleurs t&#39;as déjà interpellé, tu peux tenter d&#39;arracher à M. Bazeaux ta cible :
 [[Si tu es prêt à prendre le risque.|Attrape le slip]]
 [[Si tu perds tes couilles, enlèves les de ton inventaire.|Rire]]
 
 [[Si tu ne les as pas rencontrés, va suivre le cours|Rire]]
 
 (click: &quot;Si tu perds tes couilles, enlèves les de ton inventaire.&quot;)[
-(set: $Objets to $Objets + (ds: &quot;pas de couilles&quot;))]</tw-passagedata><tw-passagedata pid="31" name="Baston" tags="88 JE Bengala" position="1119,1406" size="100,100">Tu as décidé de ne pas te laisser marcher sur les pieds dès le jour de la rentrée par un chauve. Malheureusement pour toi, M Bengala est un expert de Krav Maga...
+(set: $Objets to $Objets + (ds: &quot;pas de couilles&quot;))]</tw-passagedata><tw-passagedata pid="28" name="Baston" tags="88 JE Bengala" position="1119,1406" size="100,100">Tu as décidé de ne pas te laisser marcher sur les pieds dès le jour de la rentrée par un chauve. Malheureusement pour toi, M Bengala est un expert de Krav Maga...
 
 Si tu as un couteau dans ton inventaire (if: ($Objets contains &quot;Schlass&quot;))[(en effet c&#39;est le cas)
 ](else: )[(mais on sait tous que tu n&#39;en a pas)]
 [[tu peut l&#39;utiliser|Couteau]].
-[[Sinon bats toi à mains nues.|Mort générique]]</tw-passagedata><tw-passagedata pid="32" name="Révisions" tags="12" position="1992,1582" size="200,200">Tu entres dans la salle d&#39;étude, tu peut [[réviser tout seul|Travail]] pour essayer d&#39;augmenter ton intellignece (utile si t&#39;est débile), outu peut [[demander à ce groupe de gens de ta classe si ils ont une astuce pour le DS|Groupe]].</tw-passagedata><tw-passagedata pid="33" name="Question" tags="50 Bengala" position="2340,1117" size="100,100">Alors que tu t&#39;approches de cet homme qui ne peut être regardé sans lunettes de Soleil, dans l&#39;unique but de lui soutirer des informations, tu lance un dé6, ca fait : (random: 1, 6).
+[[Sinon bats toi à mains nues.|Mort générique]]</tw-passagedata><tw-passagedata pid="29" name="Révisions" tags="12" position="1992,1582" size="200,200">Tu entres dans la salle d&#39;étude, tu peut [[réviser tout seul|Travail]] pour essayer d&#39;augmenter ton intellignece (utile si t&#39;est débile), outu peut [[demander à ce groupe de gens de ta classe si ils ont une astuce pour le DS|Groupe]].</tw-passagedata><tw-passagedata pid="30" name="Question" tags="50 Bengala" position="2340,1117" size="100,100">Alors que tu t&#39;approches de cet homme qui ne peut être regardé sans lunettes de Soleil, dans l&#39;unique but de lui soutirer des informations, tu lance un dé6, ca fait : (random: 1, 6).
 
 Si tu as fait un score inférieur ou égal à ton charisme ($Charisme), [[continues ici|Réussite Question]],
-Sinon [[continue là|Echec Question]].</tw-passagedata><tw-passagedata pid="34" name="Réussite Question" tags="63 Bengala Pampelune" position="2612,1124" size="100,100">Tu Pôses au Dias la question qui te brûle les lêvres :&quot;Euh, enfait... la Navarrofransse c&#39;est où sur la carte ?&quot;
+Sinon [[continue là|Echec Question]].</tw-passagedata><tw-passagedata pid="31" name="Réussite Question" tags="63 Bengala Pampelune" position="2612,1124" size="100,100">Tu Pôses au Dias la question qui te brûle les lêvres :&quot;Euh, enfait... la Navarrofransse c&#39;est où sur la carte ?&quot;
 Dans sa grande magnanimité, ton interlocuteur entame une longue explication qui ne peut que te garantir une bonne note au DS. Ajoute le code Pampelune à ton inventaire. (set: $Objets to $Objets + (ds: &quot;Pampelune&quot;))
 
 [[Tu peut aller réviser|Révisions]],
-ou aller te branler les couilles [[à la maison des lycéens|Maison des lycéens]].</tw-passagedata><tw-passagedata pid="35" name="Echec Question" tags="7 Bengala -1_Santé-Mentale -1_Moral" position="2507,1309" size="100,100">Tu pôses au Sahid la question qui te brûle les lèvres :&quot;Euh...Demain le DS il est écrit ou oral ?&quot;
+ou aller te branler les couilles [[à la maison des lycéens|Maison des lycéens]].</tw-passagedata><tw-passagedata pid="32" name="Echec Question" tags="7 Bengala -1_Santé-Mentale -1_Moral" position="2507,1309" size="100,100">Tu pôses au Sahid la question qui te brûle les lèvres :&quot;Euh...Demain le DS il est écrit ou oral ?&quot;
 Ce à quoi il te répond du tac au tac :&quot;ANAL si tu n&#39;étudies pas !&quot;
 Son sourire carnassier ne te sortira pas de la tête de sitot. Tu perds un point de Santé Mentale et un de moral. (set: $S_M to $S_M - 1, $Moral to $Moral - 1)
 
-Dans ta tristitude [[tu décides d&#39;aller réviser|Révisions]].</tw-passagedata><tw-passagedata pid="36" name="Couteau" tags="45 JE Bengala +1_Charisme +1_Moral" position="567,1722" size="100,100">Tu sors ton couteau de ta poche et le monaces.
+Dans ta tristitude [[tu décides d&#39;aller réviser|Révisions]].</tw-passagedata><tw-passagedata pid="33" name="Couteau" tags="45 JE Bengala +1_Charisme +1_Moral" position="567,1722" size="100,100">Tu sors ton couteau de ta poche et le monaces.
 M Bengala lache l&#39;affaire et accepte de te fournir des notes à la hauteur.
 Tu gagnes 1 point de charisme, et 1 point de moral.
 
-[[Tu retournes dans le couloir pour aller à ton prochain cours.|Couloir]]</tw-passagedata><tw-passagedata pid="37" name="Mort générique" tags="70 JE Déces" position="952,1331" size="100,100">Tu as cherché la merde avec la mauvaise personne,
+[[Tu retournes dans le couloir pour aller à ton prochain cours.|Couloir]]</tw-passagedata><tw-passagedata pid="34" name="Mort générique" tags="70 JE Déces" position="952,1331" size="100,100">Tu as cherché la merde avec la mauvaise personne,
 DOMMAGE
-[[Partie terminée...|Déces]]</tw-passagedata><tw-passagedata pid="38" name="Couloir" tags="4 Geoffroy" position="1107,2813" size="100,100">Alors que tu déambule à travers le ccouloir, tu apercois Geoffoy à l&#39;autre bout; pour le saluer, tu :
+[[Partie terminée...|Déces]]</tw-passagedata><tw-passagedata pid="35" name="Couloir" tags="4 Geoffroy" position="1107,2813" size="100,100">Alors que tu déambule à travers le ccouloir, tu apercois Geoffoy à l&#39;autre bout; pour le saluer, tu :
 
 [[décides de lui dire bonjour &quot;à sa manière&quot;|Challot]].
 [[sort ton nouveau couteau pour lui montrer, *si tu en as un* |Couteau Challot]](if: not ($Objets contains &quot;Schlass&quot;))[ (ne triche pas stp)].
 [[sautes en l&#39;air pour lui faire coucou de loin|Geoffroy]].
-ou restes tout à fait asocial, et ne fait rien. [[Tu vas de suite en Philo.|Cours de Philo]] </tw-passagedata><tw-passagedata pid="39" name="Travail" tags="82" position="1773,1878" size="100,100">Tu te lance dans ton cahier avec l&#39;ardeur d&#39;une gaufre essouflée, avec l&#39;espoir d&#39;engranger une montagne de conaissances nouvelles.
+ou restes tout à fait asocial, et ne fait rien. [[Tu vas de suite en Philo.|Cours de Philo]] </tw-passagedata><tw-passagedata pid="36" name="Travail" tags="82" position="1773,1878" size="100,100">Tu te lance dans ton cahier avec l&#39;ardeur d&#39;une gaufre essouflée, avec l&#39;espoir d&#39;engranger une montagne de conaissances nouvelles.
 Tu fait le calcul suivant : 
 Succès = Intelligence + Moral + 2dés6
 Succès = $Intelligence + $Moral +(print: (random: 1,6) + (random: 1,6))
 
 [[Si ton succès est supérieur ou égal à 16|Réussite Travail]],
 [[Si ton succès est égal à 7 ou moins|Echec critique Travail]],
-[[Sinon|Echec simple Travail]].</tw-passagedata><tw-passagedata pid="40" name="Groupe" tags="34" position="2098,1883" size="100,100">Tu arrives devant le groupe de tes camarades, et tu leur dit :
+[[Sinon|Echec simple Travail]].</tw-passagedata><tw-passagedata pid="37" name="Groupe" tags="34" position="2098,1883" size="100,100">Tu arrives devant le groupe de tes camarades, et tu leur dit :
 
 [[&quot;Ca vous dit on révise ensemble ?&quot;|Travail]] (et tu gagnes un point de moral)\
 (click: &quot;Ca vous dit on révise ensemble ?&quot;)[(set: $Moral to $Moral + 1)]\
 
 ou [[&quot;Vous etes prêts à tenter quelque chôse de dangereux?&quot;|Danger]]
 
-Mais si Gavoille est ton ami, (if: $Amities contains &quot;Gavoille&quot;)[(et c&#39;est le cas),] [[tu doit venir t&#39;assoir à côté de lui|Gavoille]].</tw-passagedata><tw-passagedata pid="41" name="Gavoille" tags="Gavoille 57 JE" position="2143,2094" size="100,100">Tu t&#39;assieds à côté de Gavoille. D&#39;un air de dangereux psychopate ou d&#39;autite il te lance : &quot;Tu connais Wankil Studio ?&quot;
+Mais si Gavoille est ton ami, (if: $Amities contains &quot;Gavoille&quot;)[(et c&#39;est le cas),] [[tu doit venir t&#39;assoir à côté de lui|Gavoille]].</tw-passagedata><tw-passagedata pid="38" name="Gavoille" tags="Gavoille 57 JE" position="2143,2094" size="100,100">Tu t&#39;assieds à côté de Gavoille. D&#39;un air de dangereux psychopate ou d&#39;autite il te lance : &quot;Tu connais Wankil Studio ?&quot;
 Ta culture générale est mise à l&#39;épreuve. Que vas tu lui répondre ?
 Lance un dé6, ca fait (random: 1, 6).
 
 [[Si tu as fait moins que ton intelligence(qui est de  $Intelligence)|Réf]].
 [[Si tu as fait plus que ton intelligence|Je sait pas]].
-[[Si tu fait 6|Ecrasé]].</tw-passagedata><tw-passagedata pid="42" name="Réf" tags="Gavoille 91 Déces" position="1868,2279" size="100,100">(set: $d to &quot;Mort générique&quot;)
+[[Si tu fait 6|Ecrasé]].</tw-passagedata><tw-passagedata pid="39" name="Réf" tags="Gavoille 91 Déces" position="1868,2279" size="100,100">(set: $d to &quot;Mort générique&quot;)
 Enthousiaste, tu lui sort : &quot;Oh c&#39;est l&#39;anus du monde...&quot;
 Ce à quoi la baleine de Pontarlier répond par une sorte d&#39;expiration de jouissance apathique.
 
@@ -213,41 +213,41 @@ Maintenant tu peut dire :
 [[Bon, c&#39;est pas le trou mais le tampax, et aller travailler.|Travail]]
 [[T&#39;as pas de la bouffe ?|$d]]
 Si tu a déjà perdu de la santé mentale,(if: $S_M is not 3)[(et c&#39;est le cas)] tu as le droit de sortir :
-[[Tu sait que tu me fait penser à un TARDIS, mais inversé.|Blague TARDIS]]</tw-passagedata><tw-passagedata pid="43" name="Je sait pas" tags="Gavoille 27" position="2382,2077" size="100,100">Tu restes humble, et tu lui réponds que tu veut bien découvrir. A partir de cet instant, &quot;Gavoille&quot; se met en tête - avec une bandaison à peine voilée - de téduquer aux mystères de ces obscurs dieux du Youtubegame Francais.
+[[Tu sait que tu me fait penser à un TARDIS, mais inversé.|Blague TARDIS]]</tw-passagedata><tw-passagedata pid="40" name="Je sait pas" tags="Gavoille 27" position="2382,2077" size="100,100">Tu restes humble, et tu lui réponds que tu veut bien découvrir. A partir de cet instant, &quot;Gavoille&quot; se met en tête - avec une bandaison à peine voilée - de téduquer aux mystères de ces obscurs dieux du Youtubegame Francais.
 
 Si il te tape sur les nerfs, tu peut [[le quitter pour ton cahier|Révisions]], ou [[Rejoindre les autres|Danger]] et retires le de ta liste d&#39;amis.
 (click: &quot;le quitter pour ton cahier&quot;)+(click: &quot;Rejoindre les autres&quot;)\
 [(if: &quot;Gavoille&quot; is in $Amities)[(set: $Amities to $Amities - (ds: &quot;Gavoille&quot;))]]\
 
-Mais, si tu as un moral inférieur ou égal à 4(if: $Moral &lt; 5)[ (et c&#39;est le cas)], [[tu te livres tout entier à lui|Meilleurs amis]].</tw-passagedata><tw-passagedata pid="44" name="Ecrasé" tags="Gavoille Déces 66" position="2081,2324" size="100,100">Tu lui demandes : &quot;C&#39;est pas un site de porn ?&quot; pour montrer que ta culture générale n&#39;est pas aussi abyssale qu&#39;on aurait pu le croire.
+Mais, si tu as un moral inférieur ou égal à 4(if: $Moral &lt; 5)[ (et c&#39;est le cas)], [[tu te livres tout entier à lui|Meilleurs amis]].</tw-passagedata><tw-passagedata pid="41" name="Ecrasé" tags="Gavoille Déces 66" position="2081,2324" size="100,100">Tu lui demandes : &quot;C&#39;est pas un site de porn ?&quot; pour montrer que ta culture générale n&#39;est pas aussi abyssale qu&#39;on aurait pu le croire.
 Dommage pour toi, Gavoille décide alors de técraser tout en hurlant sur l&#39;immence potentiel intellectuel du Wankil Studio.
  
 [[Tu effectue le décès.|$deces]]
 
-Partie terminée.</tw-passagedata><tw-passagedata pid="45" name="Blague TARDIS" tags="32 Gavoille" position="1835,2535" size="100,100">D&#39;un air attardé, il sort : &quot;Hein ?
+Partie terminée.</tw-passagedata><tw-passagedata pid="42" name="Blague TARDIS" tags="32 Gavoille" position="1835,2535" size="100,100">D&#39;un air attardé, il sort : &quot;Hein ?
 -Ouais, t&#39;est plus gros à l&#39;extérieur !
 *Après un temps qui représente le ping de son cerveau :*
 -Putain de fils de Pute ! J&#39;vais te niquer !&quot;
 Et il commence à te péter les genoux du pied gauche alors que tu te fout de sa geule.
 Au bout de 5mg de Morphine en équivalent douleur, tu agis: &quot;Bon arrête là on doit aller en philo.&quot;
-En grognant de déception, Gravoille ramasse ton sac et le sien, puis [[vous vous engegez dans le couloir en direction de la prochaine épreuve|Cours de Philo]].</tw-passagedata><tw-passagedata pid="46" name="Meilleurs amis" tags="47 Gavoille" position="2355,2356" size="100,100">Tu en tames avec Gravoille une longue, mais revigirante discussion qui alterne entre Wankil Studio et tes chagrins personnels, en passant entre autres, par Undertale et Minecraft.
+En grognant de déception, Gravoille ramasse ton sac et le sien, puis [[vous vous engegez dans le couloir en direction de la prochaine épreuve|Cours de Philo]].</tw-passagedata><tw-passagedata pid="43" name="Meilleurs amis" tags="47 Gavoille" position="2355,2356" size="100,100">Tu en tames avec Gravoille une longue, mais revigirante discussion qui alterne entre Wankil Studio et tes chagrins personnels, en passant entre autres, par Undertale et Minecraft.
 Maintenant, cette motte de beurre vivante est ton meilleur ami; ajoutes en une à ton inventaire. (set: $Objets to $Objets + (ds: &quot;Motte de beurre&quot;))
 
-Dans la joie et la bonne humeur, tu passes par le [[couloir|Couloir]] pour aller en philo.</tw-passagedata><tw-passagedata pid="47" name="Réussite Travail" tags="JE 3 +1_Intelligence +1_Moral" position="1396,1934" size="100,100">Les cours t&#39;apparaissent comme une évidence, les plans détaillés se révèlent magiquement, les exercices s&#39;enchainent; tu n&#39;a pas besoin de correction, TU ES LA CORRECTION !
+Dans la joie et la bonne humeur, tu passes par le [[couloir|Couloir]] pour aller en philo.</tw-passagedata><tw-passagedata pid="44" name="Réussite Travail" tags="JE 3 +1_Intelligence +1_Moral" position="1396,1934" size="100,100">Les cours t&#39;apparaissent comme une évidence, les plans détaillés se révèlent magiquement, les exercices s&#39;enchainent; tu n&#39;a pas besoin de correction, TU ES LA CORRECTION !
 Tu gagnes un point d&#39;intelligence et un point de moral.
 (set: $Intelligence to $Intelligence + 1)
-[[Passe par le couloir pour aller en cours.|Couloir]]</tw-passagedata><tw-passagedata pid="48" name="Echec critique Travail" tags="74 -1_Moral" position="1613,1644" size="100,100">Les phrases s&#39;emmèlent entre elles, alors que tu essaies de les comprendre, les mots volent, et le notions te violent.
+[[Passe par le couloir pour aller en cours.|Couloir]]</tw-passagedata><tw-passagedata pid="45" name="Echec critique Travail" tags="74 -1_Moral" position="1613,1644" size="100,100">Les phrases s&#39;emmèlent entre elles, alors que tu essaies de les comprendre, les mots volent, et le notions te violent.
 Tu es certain d&#39;en faire des cauchemards cette nuit.
 
-[[Tu perds un point de Moral.|Nuit]]</tw-passagedata><tw-passagedata pid="49" name="Echec simple Travail" tags="" position="1554,2170" size="100,100">Tu te rends compte que cette tentative ne portera jamais ses fruits.
+[[Tu perds un point de Moral.|Nuit]]</tw-passagedata><tw-passagedata pid="46" name="Echec simple Travail" tags="" position="1554,2170" size="100,100">Tu te rends compte que cette tentative ne portera jamais ses fruits.
 
-Vas en philo en passant par le [[couloir|Couloir]].</tw-passagedata><tw-passagedata pid="50" name="Nuit" tags="Nuit 24" position="1201,1692" size="100,100">Noir.
+Vas en philo en passant par le [[couloir|Couloir]].</tw-passagedata><tw-passagedata pid="47" name="Nuit" tags="Nuit 24" position="1201,1692" size="100,100">Noir.
 Tu te réveilles soudaineent, effrayé et en sueur.
 (link: &quot;AAAAAAAH!&quot;)[==
 
 Francois 1er te pourchasse, tu essaies de courir, mais tu n&#39;arrives qu&#39;a tomber de ta chaise.
 
-Quand tu réussis à reprendre tes esprits, tu te rend compte que tu t&#39;es endormi en travaillant, et qu&#39;il fait nuit.</tw-passagedata><tw-passagedata pid="51" name="Image des voleurs" tags="" position="2874,2229" size="100,100">&lt;style&gt; img {
+Quand tu réussis à reprendre tes esprits, tu te rend compte que tu t&#39;es endormi en travaillant, et qu&#39;il fait nuit.</tw-passagedata><tw-passagedata pid="48" name="Image des voleurs" tags="" position="2874,2229" size="100,100">&lt;style&gt; img {
 	max-width:90%;
 	max-height:90%;
 }
@@ -255,29 +255,29 @@ Quand tu réussis à reprendre tes esprits, tu te rend compte que tu t&#39;es en
 &lt;/style&gt;
 &lt;img src=https://zonecreative.it/wp-content/uploads/2015/07/sito-bisca-01-1600x1067.jpg&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="52" name="Challot" tags="18 Challot Geoffroy Déces" position="964,2967" size="100,100">Alors que tu commences à ouvrir la bouche, dans l&#39;unique but de sluer Geoffroy, une certaine Mme Challot s&#39;extrait d&#39;une porte juste devant ton nez. Or avant que la conscience de sa présence ne puisse atteindre ton encéphale, tu t&#39;écries :
+</tw-passagedata><tw-passagedata pid="49" name="Challot" tags="18 Challot Geoffroy Déces" position="964,2967" size="100,100">Alors que tu commences à ouvrir la bouche, dans l&#39;unique but de sluer Geoffroy, une certaine Mme Challot s&#39;extrait d&#39;une porte juste devant ton nez. Or avant que la conscience de sa présence ne puisse atteindre ton encéphale, tu t&#39;écries :
 (text-colour: &quot;red&quot;)+(text-style: &quot;shudder&quot;)+(text-style: &quot;emboss&quot;)+(text-style: &quot;expand&quot;)[Salut NULLOS !]
 
-Tu est exclu du lycée, Partie terminée.</tw-passagedata><tw-passagedata pid="53" name="Couteau Challot" tags="54 Challot Geoffroy JE" position="1112,2966" size="100,100">Pas de chance, Mme Challot passait par là à ce moment là. Tu l&#39;embroches !
-Rends toi en [[Prison]] sans passer par la case départ.</tw-passagedata><tw-passagedata pid="54" name="Geoffroy" tags="41 Geoffroy" position="1267,2966" size="100,100">Après lui avoir fait coucou, il glisse langoureusement sa seconde main par dessus la tienne; puis, il commence à te caresser à travers ton T-shirt. 
+Tu est exclu du lycée, Partie terminée.</tw-passagedata><tw-passagedata pid="50" name="Couteau Challot" tags="54 Challot Geoffroy JE" position="1112,2966" size="100,100">Pas de chance, Mme Challot passait par là à ce moment là. Tu l&#39;embroches !
+Rends toi en [[Prison]] sans passer par la case départ.</tw-passagedata><tw-passagedata pid="51" name="Geoffroy" tags="41 Geoffroy" position="1267,2966" size="100,100">Après lui avoir fait coucou, il glisse langoureusement sa seconde main par dessus la tienne; puis, il commence à te caresser à travers ton T-shirt. 
 Ajoutes Geoffroy à ta liste d&#39;amis et vas en [[Cours de Philo]].
-(set: $Amities to $Amities + (ds: &quot;Geoffroy&quot;))</tw-passagedata><tw-passagedata pid="55" name="Prison" tags="Muller 35 JE Déces" position="1114,3115.3333333333335" size="100,100">Muller te jettes dans la cellule. Un CRS arrie verrs toi, tapotant sa matraque dans sa main et te lance :&quot;Salut Théo !&quot;
+(set: $Amities to $Amities + (ds: &quot;Geoffroy&quot;))</tw-passagedata><tw-passagedata pid="52" name="Prison" tags="Muller 35 JE Déces" position="1114,3115.3333333333335" size="100,100">Muller te jettes dans la cellule. Un CRS arrie verrs toi, tapotant sa matraque dans sa main et te lance :&quot;Salut Théo !&quot;
 
-[[Partie terminée|$d]].</tw-passagedata><tw-passagedata pid="56" name="Attrape le slip" tags="31 JE Test-de-stat" position="1745,3194" size="100,100">Tu t&#39;avances tranquillement vers M. Bazeaux tant qu&#39;il a le dos tourné :
+[[Partie terminée|$d]].</tw-passagedata><tw-passagedata pid="53" name="Attrape le slip" tags="31 JE Test-de-stat" position="1745,3194" size="100,100">Tu t&#39;avances tranquillement vers M. Bazeaux tant qu&#39;il a le dos tourné :
 
 Si ta dextérité($Dexterite) est de 4 ou plus [[va ici|Réussite Slip]].
-Sinon [[va la|Echec Slip]]</tw-passagedata><tw-passagedata pid="57" name="Rire" tags="23 Bazeaux -Main JE Test-de-stat" position="2190.3333333333335,3288" size="100,100">Après avoir commencé le cours par son rire iconique rappelant un ventilateur asmathique, M. Bazeaux te fait copier le cours pendant toute l&#39;heure. Lances un dé6, ca fait (random: 1, 6).
+Sinon [[va la|Echec Slip]]</tw-passagedata><tw-passagedata pid="54" name="Rire" tags="23 Bazeaux -Main JE Test-de-stat" position="2190.3333333333335,3288" size="100,100">Après avoir commencé le cours par son rire iconique rappelant un ventilateur asmathique, M. Bazeaux te fait copier le cours pendant toute l&#39;heure. Lances un dé6, ca fait (random: 1, 6).
 
 Si le résultat est inférieur à ta force, ton cours est copié en entier, [[ajoutes-le à ton inventaire|Approche]].
 Sinon, tu t&#39;es cassé la main. [[Supprimes la de ton inventaire.|Approche]]
 
 (click: &quot;ajoutes-le à ton inventaire&quot;)[(set: $Objets to $Objets + (ds: &quot;35 pages de la vie et les oeuvres de Descartes&quot;))]
-(click: &quot;Supprimes la de ton inventaire&quot;)[(set: $Mains to $Mains - 1)]</tw-passagedata><tw-passagedata pid="58" name="Réussite Slip" tags="JE 61 Bazeaux +Slip" position="1903.3333333333335,3384" size="100,100">Tu lui prends de justesse. Ouf! Il n&#39;a rien remarqué et te dis bonjour comme si de rien n&#39;était.
+(click: &quot;Supprimes la de ton inventaire&quot;)[(set: $Mains to $Mains - 1)]</tw-passagedata><tw-passagedata pid="55" name="Réussite Slip" tags="JE 61 Bazeaux +Slip" position="1903.3333333333335,3384" size="100,100">Tu lui prends de justesse. Ouf! Il n&#39;a rien remarqué et te dis bonjour comme si de rien n&#39;était.
 
 Tu peut ajouter le slip à ton inventaire et t&#39;enfuir par la fenêtre pour [[retourner voir le syndicat des voleurs|Par la fenetre Voleurs]].
-(set: $Objets to $Objets + (ds: &quot;Slip de Bazeaux&quot;))</tw-passagedata><tw-passagedata pid="59" name="Echec Slip" tags="Déces 70 JE" position="1554.3333333333333,3494" size="100,100">Tu as cherché la merde avec la mauvaise personne,
+(set: $Objets to $Objets + (ds: &quot;Slip de Bazeaux&quot;))</tw-passagedata><tw-passagedata pid="56" name="Echec Slip" tags="Déces 70 JE" position="1554.3333333333333,3494" size="100,100">Tu as cherché la merde avec la mauvaise personne,
 DOMMAGE  
-[[Partie terminée...|$d]]</tw-passagedata><tw-passagedata pid="60" name="Par la fenetre Voleurs" tags="53 JE Ayan Faustin Raphael Mathilde" position="1953.0000000000002,3849.0000000000005" size="100,100">Tu arrives devant eux et demandes à l&#39;un d&#39;entre eux de te montrer qui est le chef. Il te montre  Ayan du doigt. 
+[[Partie terminée...|$d]]</tw-passagedata><tw-passagedata pid="57" name="Par la fenetre Voleurs" tags="53 JE Ayan Faustin Raphael Mathilde" position="1953.0000000000002,3849.0000000000005" size="100,100">Tu arrives devant eux et demandes à l&#39;un d&#39;entre eux de te montrer qui est le chef. Il te montre  Ayan du doigt. 
 Ayan dit :&quot;As tu rapporté la marchandise ?&quot;
 Tu tends fièrement  le slip de M.Bazeaux. 
 Ayan souris et dit :&quot;Bienvenue parmi nous, comment tu t&#39;apelles Théodule ?&quot;
@@ -285,34 +285,41 @@ Tu réponds que tu t&#39;apelles Théodule.
 Il dit ensuite :&quot;Très bien, voici nos membres : Faustin, Raphaël, Mathilde et moi-même.&quot;
 Tu demandes timidement ce qu&#39;is feront de ce slip, Ayan te réponds &quot;(text-style: &quot;blur&quot;)[Schhhhht...]&quot; et le range dans sa poche.
 
-[[Continues|Nouvelle mission]].</tw-passagedata><tw-passagedata pid="61" name="Nouvelle mission" tags="16" position="1999.3333333333337,4247.333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="62" name="Approche" tags="Bazeaux 78 Test-de-stat" position="2291.9999999999995,3546.3333333333335" size="100,100">Alors que tu ranges les feuilles de ce cours, M. Bazeaux s&#39;approche de toi.
+[[Continues|Nouvelle mission]].</tw-passagedata><tw-passagedata pid="58" name="Nouvelle mission" tags="16" position="1999.3333333333337,4247.333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="Approche" tags="Bazeaux 78 Test-de-stat" position="2291.9999999999995,3546.3333333333335" size="100,100">Alors que tu ranges les feuilles de ce cours, M. Bazeaux s&#39;approche de toi.
 
 Si ta santé mentale ($S_M) est inférieure ou égale à 2, [[vas ici|Hallucination]].
-Sinon, [[ves là|Mains]].</tw-passagedata><tw-passagedata pid="63" name="Hallucination" tags="64 Bazeaux" position="2585.333333333333,3694.666666666667" size="200,100">Ta vision se brouille. Alors que Benjamin Bazeaux s&#39;approche de toi, tu as de plus en plus l&#39;impression qu&#39;il ressemble à Gustave Courbet.
+Sinon, [[ves là|Mains]].</tw-passagedata><tw-passagedata pid="60" name="Hallucination" tags="64 Bazeaux" position="2585.333333333333,3694.666666666667" size="200,100">Ta vision se brouille. Alors que Benjamin Bazeaux s&#39;approche de toi, tu as de plus en plus l&#39;impression qu&#39;il ressemble à Gustave Courbet.
 D&#39;un coup d&#39;un seul, il fait voler ses vêtements; et s&#39;allonge sur la table.
 Il se saisit d&#39;un volume de Die Wervandlung, et prend la pose des Dieux du Stade.
 
 Soit [[tu fais comme si de rien était|Mains]].
 Soit [[tu lui sort un &quot;No Ho Mo !&quot;|Camisole]].
-Si Geoffroy est ton ami, [[tu lui lances un clin d&#39;oeil|Censuré avec Geoffroy]].</tw-passagedata><tw-passagedata pid="64" name="Mains" tags="68 Bazeaux" position="2292.0000000000005,3891.3333333333335" size="100,100">Alors que tu ranges tes affaires, M. Bazeaux passe entre les rangs pour ramasser toutes les mains décédées de ses élèves.
+Si Geoffroy est ton ami, [[tu lui lances un clin d&#39;oeil|Censuré avec Geoffroy]].</tw-passagedata><tw-passagedata pid="61" name="Mains" tags="68 Bazeaux" position="2292.0000000000005,3891.3333333333335" size="100,100">Alors que tu ranges tes affaires, M. Bazeaux passe entre les rangs pour ramasser toutes les mains décédées de ses élèves.
 
-Ton estomac gargouille, [[il est midi|Attente Cantine]].</tw-passagedata><tw-passagedata pid="65" name="Camisole" tags="22 Déces" position="2976.999999999999,3878.0000000000005" size="100,100">Tu restes piégé dans cette Hallucination. Le personel de l&#39;hôpital psychiatrique Nesquick est alors oblligé de t&#39;emmener, pendant que de la bave coule de ta bouche par litres entiers.
+Ton estomac gargouille, [[il est midi|Attente Cantine]].</tw-passagedata><tw-passagedata pid="62" name="Camisole" tags="22 Déces" position="2976.999999999999,3878.0000000000005" size="100,100">Tu restes piégé dans cette Hallucination. Le personel de l&#39;hôpital psychiatrique Nesquick est alors oblligé de t&#39;emmener, pendant que de la bave coule de ta bouche par litres entiers.
 
 (display: &#39;Impasse&#39;)
  
-[[Partie terminée|$d]]</tw-passagedata><tw-passagedata pid="66" name="Censuré avec Geoffroy" tags="38 Geoffroy Bazeaux" position="2671.9999999999995,4113" size="100,100">Vous décidez enselble de prendre le taureau par la corne,
+[[Partie terminée|$d]]</tw-passagedata><tw-passagedata pid="63" name="Censuré avec Geoffroy" tags="38 Geoffroy Bazeaux" position="2673.666666666666,4118" size="100,100">Vous décidez enselble de prendre le taureau par la corne,
 parcequ&#39;à deux ca sera bien mieux.
-
-
 =&gt;&lt;=
+
+
+
+
+
+
 (text-style: &quot;strike&quot;)[CENSURÉ]
-
-
 &lt;==
-Quand tu as fini, [[il est midi|Attente Cantine]].</tw-passagedata><tw-passagedata pid="67" name="Impasse" tags="" position="2979.5282999674478,3770.927734375" size="100,100">&lt;font size=&quot;-1&quot;&gt;
+
+
+
+
+
+Quand tu as fini, [[il est midi|Attente Cantine]].</tw-passagedata><tw-passagedata pid="64" name="Impasse" tags="" position="2979.5282999674478,3770.927734375" size="100,100">&lt;font size=&quot;-1&quot;&gt;
 
 &lt;pre&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;#fb0202&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;#fb0202&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;#dc0222&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;#fc2222&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;#fb2222&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;#fc2222&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;#fb2222&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;#dc0222&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮&lt;/font&gt;&lt;font color=&quot;blue&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮&lt;/font&gt;&lt;font color=&quot;white&quot;&gt;▮&lt;/font&gt;&lt;br&gt;
-&lt;/pre&gt;</tw-passagedata><tw-passagedata pid="68" name="Attente Cantine" tags="" position="2386.999999999999,4484.666666666668" size="200,200">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+&lt;/pre&gt;</tw-passagedata><tw-passagedata pid="65" name="Attente Cantine" tags="" position="2386.999999999999,4484.666666666668" size="200,200">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
